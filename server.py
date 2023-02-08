@@ -3,7 +3,7 @@ import threading
 import queue
 
 PORT = 80
-SERVER = "127.0.0.1"
+SERVER = ''
 ADDR = (SERVER, PORT)
 FORMAT = 'utf-8'
 HEADER = 64
