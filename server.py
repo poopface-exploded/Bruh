@@ -2,8 +2,8 @@ import socket
 import threading
 import queue
 
-PORT = 5050
-SERVER = socket.gethostbyname(socket.gethostname())
+PORT = 80
+SERVER = "127.0.0.1"
 ADDR = (SERVER, PORT)
 FORMAT = 'utf-8'
 HEADER = 64
