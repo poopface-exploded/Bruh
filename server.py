@@ -1,10 +1,7 @@
-import socket
-import threading
-import queue
 from flask import Flask
 
 app = Flask(__name__)
 
 @app.route('/')
-def server():
+def hello_world():
     return 'Hello, World!'
