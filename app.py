@@ -4,7 +4,7 @@ import queue
 from flask import Flask
 
 PORT = 5050
-SERVER = '216.24.57.3'
+SERVER = ''
 ADDR = (SERVER, PORT)
 FORMAT = 'utf-8'
 HEADER = 64
@@ -55,8 +55,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def server():
-    return('a')
     start()
+    return('a')
     
 
 
