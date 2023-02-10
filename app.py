@@ -5,7 +5,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route('/')
 def server():
 
     PORT = 5050
@@ -62,5 +62,3 @@ def server():
             thread_brdcst.start()
         
     start()
-
-server()
