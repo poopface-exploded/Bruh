@@ -60,7 +60,6 @@ app = Flask(__name__)
 
 @app.route('/')
 def server():
-    start()
     return('server works or something(hopefully)')
     
 
