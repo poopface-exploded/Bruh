@@ -33,7 +33,7 @@ def start():
     server.listen()
     while True:
         conn, addr = server.accept()
-        conn.send(('[CONNECTED]').encode(FORMAT)
+        conn.send(('[CONNECTED]').encode(FORMAT))
         thread = threading.Thread(target = receive, args = (conn, addr))
         thread.start()
         thread_brdcst = threading.Thread(target = broadcast)
