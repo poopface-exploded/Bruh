@@ -57,7 +57,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def begin():
-    return('You found the server URL i guess? now what')
+    return 'you found the server\'s static site. congrats!'
     start()
     
 
