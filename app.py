@@ -30,6 +30,7 @@ def receive(conn, addr):
             print("failed")
 
 def start():
+    return('[STARTING]')
     server.listen()
     while True:
         conn, addr = server.accept()
