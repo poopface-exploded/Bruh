@@ -4,7 +4,7 @@ import queue
 from flask import Flask
 
 PORT = 5050
-SERVER = ''
+SERVER = '216.24.57.3'
 ADDR = (SERVER, PORT)
 FORMAT = 'utf-8'
 HEADER = 64
@@ -44,6 +44,7 @@ def broadcast():
             message, addr, conn = messages.get()
             if conn not in clients:
                 clients.append(conn)
+                conn.send('[CONNECTED]')
                 print("added!")
             for client in clients:
                 print (addr)
