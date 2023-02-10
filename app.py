@@ -55,8 +55,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def server():
-    start()
     return('a')
+    start()
     
 
 
