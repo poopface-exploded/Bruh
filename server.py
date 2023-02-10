@@ -52,13 +52,8 @@ def broadcast():
                 print (addr)
                 client.send(f"<{str(addr)}> {message}".encode(FORMAT))
                 print(message)
-        
-app = Flask(__name__)
-
-@app.route('/')
-def server():
-    return('a')
-    start()
+                
+start()
     
 
 
