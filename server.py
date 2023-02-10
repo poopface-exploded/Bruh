@@ -53,7 +53,12 @@ def broadcast():
                 client.send(f"<{str(addr)}> {message}".encode(FORMAT))
                 print(message)
                 
-start()
+app = Flask(__name__)
+
+@app.route('/')
+def begin():
+    return('You found the server URL i guess? now what')
+    start()
     
 
 
