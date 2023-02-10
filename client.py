@@ -1,5 +1,6 @@
 import socket
 import threading
+from flask import Flask
 
 HEADER = 64
 PORT = 5050
@@ -23,15 +24,22 @@ def receive():
     while True:
         print(client.recv(2048).decode(FORMAT))
 
-thread = threading.Thread(target = receive)
-thread.start()
-
 def enter():
     while True:
         message = (input(""))
         send(message)
         if message == DISCONNECT_MESSAGE:
             break
+            
+def start():
+    thread = threading.Thread(target = receive)
+    thread.start()
+    thread_2 = threading.Thread(target = enter)
+    thread_2.start()
+    
+app = Flask(__name__)
 
-thread_2 = threading.Thread(target = enter)
-thread_2.start()
+@app.route('/'):
+def hello():
+    return('helloo world')
+    start()
