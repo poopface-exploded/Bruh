@@ -38,6 +38,18 @@ def start():
         thread_brdcst = threading.Thread(target = broadcast)
         thread_brdcst.start()
 
+def broadcast():
+    while True:
+        while not messages.empty():
+            message, addr, conn = messages.get()
+            if conn not in clients:
+                clients.append(conn)
+                print("added!")
+            for client in clients:
+                print (addr)
+                client.send(f"<{str(addr)}> {message}".encode(FORMAT))
+                print(message)
+        
 app = Flask(__name__)
 
 @app.route('/')
