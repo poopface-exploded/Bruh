@@ -1,2 +1,2 @@
-python3 app.py
-python3 client.py
+python app.py
+python client.py
